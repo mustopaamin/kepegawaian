@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="800" pageHeight="842" columnWidth="760" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="14a512a5-be6d-4e28-a3f8-d8b9f3e6bf15">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Pjabatan" class="java.lang.String"/>
+	<parameter name="Pstatus" class="java.lang.String"/>
+	<parameter name="Pkondisi" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id, nip, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, status_kepegawaian, jabatan, gaji FROM data_pegawai WHERE $P!{Pkondisi}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nip" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_lengkap" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempat_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_lahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_kepegawaian" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gaji" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="800" height="92" backcolor="#009999" uuid="c88c29f8-ffb0-4828-bab7-14e9c56e1cec"/>
+				<staticText>
+					<reportElement x="0" y="10" width="297" height="43" forecolor="#FFFFFF" uuid="7ebab143-f597-430a-9361-9788ce5f442f"/>
+					<textElement textAlignment="Center">
+						<font fontName="Roboto" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Data Kepegawaian]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="551" y="10" width="115" height="20" forecolor="#FFFFFF" uuid="e67b3595-7fa4-4c70-ac8e-e4b66a31d8f7"/>
+					<textElement>
+						<font fontName="Roboto" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Jabatan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="551" y="33" width="115" height="20" forecolor="#FFFFFF" uuid="f3f2e168-389a-4873-b0ee-8406813fada6"/>
+					<textElement>
+						<font fontName="Roboto" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Status Pegawai]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="669" y="10" width="100" height="20" forecolor="#FFFFFF" uuid="f0e87e21-ad63-4e74-89a3-b1030fb81799"/>
+					<textElement>
+						<font fontName="Roboto" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Pjabatan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="669" y="33" width="100" height="20" forecolor="#FFFFFF" uuid="0e098d5d-968f-4f80-bc57-89fd98b5c11d"/>
+					<textElement>
+						<font fontName="Roboto" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Pstatus}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26">
+			<line>
+				<reportElement x="0" y="21" width="760" height="1" forecolor="#666666" uuid="f7801690-151e-482a-8403-367aaa659b52"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="61" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="22d66252-7d0a-43df-9577-2f758307fc75"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="61" y="0" width="62" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="655790d9-de1f-4d2b-98cb-5a40f8457761"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="123" y="0" width="95" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3710e85d-d417-4bc2-be12-8ed2809208db"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="218" y="0" width="81" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b5018367-774e-494b-b968-a544626bf318"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tempat Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="299" y="0" width="87" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e25d2769-937b-4f94-a40c-f0808b44353b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="386" y="0" width="78" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a3eaf229-1672-4223-907c-89a9b92a98be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="464" y="0" width="106" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9a86b5c1-76dd-4c9d-8419-c8f5f0270db5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="570" y="0" width="90" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f6bafff7-dbd9-4392-a29d-eeca75bdab20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jabatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="659" y="0" width="101" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="456b24ee-35c8-4b6d-af4c-90e92670bfdc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gaji]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="760" height="1" uuid="428dec35-b7c3-48c7-b529-79a0f3266dd2"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="465" y="0" width="106" height="20" uuid="a80d71eb-fb84-4773-a1d0-be6f31450979"/>
+				<textElement>
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status_kepegawaian}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+				<reportElement x="300" y="0" width="87" height="20" uuid="de86f897-c795-469b-b394-2b8370c3c696"/>
+				<textElement>
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_lahir}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="219" y="0" width="81" height="20" uuid="4614ec98-c9b2-4115-8d3b-64c9c2f4f4c2"/>
+				<textElement>
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tempat_lahir}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="61" height="20" uuid="aaa37c22-b77a-4825-aeb6-bd187cce871e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="61" y="0" width="62" height="20" uuid="35e59101-cb7c-4516-9895-1fe89e8e81c2"/>
+				<textElement>
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nip}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="123" y="0" width="95" height="20" uuid="296501af-9a56-4976-a190-b3c0830f81e3"/>
+				<textElement>
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="387" y="0" width="78" height="20" uuid="fb0b5be0-4af9-4809-bf2d-885f1be9d491"/>
+				<textElement>
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="570" y="0" width="89" height="20" uuid="19240ddd-2165-4deb-b948-c2561ddf1bc8"/>
+				<textElement>
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;#,##0-">
+				<reportElement x="659" y="0" width="101" height="20" uuid="09708fb1-ea50-4472-b701-f76578f9eec0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gaji}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="719" height="13" backcolor="#E6E6E6" uuid="52e307e8-24d3-44b0-8d9e-323eaa676f62"/>
+				<textElement textAlignment="Right">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="720" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="41d58aec-d954-4ed3-9c96-a643694fde75"/>
+				<textElement>
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="f1bca368-f80c-4a1f-991c-16267881ecab"/>
+				<textElement>
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
