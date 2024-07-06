@@ -1,11 +1,10 @@
 # kepegawaian
 Tugas Mata Kuliah Pemrograman Visual
 
-Tahun Ajaran: 2024 - 2025
+> Tahun Ajaran: 2023 - 2024
 
-KELAS S6H
-Anggota Kelompok 5
-Yulius Arly Rachman - 202243570104
-Mustopa Amin		- 202243579089
+Anggota Kelompok 5 - S6H
+ - Yulius Arly Rachman - 202243570104
+ - Mustopa Amin		   - 202243579089
 
 Kontak Saya: mustopaamin@gmail.com
